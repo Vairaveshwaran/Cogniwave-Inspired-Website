@@ -1,0 +1,221 @@
+/* === Base Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(180deg, #f4f6f8 0%, #e3f2fd 100%);
+  color: #333;
+  line-height: 1.6;
+}
+
+/* === Navbar === */
+header {
+  background-color: #0d47a1;
+  padding: 15px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  list-style: none;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+nav ul li a:hover {
+  background-color: #1565c0;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+/* === Hero Carousel === */
+.carousel-item img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(13, 71, 161, 0.5);
+  border-radius: 50%;
+}
+
+/* === Global Section Styling === */
+section {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+section h2 {
+  color: #0d47a1;
+  font-size: 32px;
+  margin-bottom: 20px;
+  border-left: 6px solid #2196f3;
+  padding-left: 12px;
+}
+section p {
+  font-size: 18px;
+  color: #444;
+}
+
+/* === About Section === */
+.about-preview {
+  background: linear-gradient(to right, #e3f2fd, #ffffff);
+  padding: 40px;
+  border-radius: 16px;
+  margin-top: 50px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+.about-preview p {
+  font-size: 18px;
+}
+
+/* === Why Us === */
+.why-us {
+  background: #ffffff;
+  border-left: 6px solid #0d47a1;
+  padding: 40px;
+  border-radius: 16px;
+  margin-top: 40px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+}
+.why-us ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+.why-us ul li {
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+/* === Services Grid === */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+.services-grid div {
+  background-color: #ffffff;
+  padding: 30px;
+  border-left: 6px solid #0d47a1;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease;
+}
+.services-grid div:hover {
+  transform: translateY(-8px);
+}
+
+/* === Testimonials === */
+.testimonials {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding-bottom: 10px;
+}
+.testimonials > div {
+  background-color: white;
+  border-radius: 12px;
+  min-width: 280px;
+  padding: 20px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+.testimonials::-webkit-scrollbar {
+  height: 8px;
+}
+.testimonials::-webkit-scrollbar-thumb {
+  background: #2196f3;
+  border-radius: 4px;
+}
+
+/* === Contact Form === */
+form input,
+form textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+form button {
+  background-color: #0d47a1;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 16px;
+}
+form button:hover {
+  background-color: #1565c0;
+}
+iframe {
+  width: 100%;
+  height: 320px;
+  border: none;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+/* === Timeline === */
+.timeline ul {
+  list-style: none;
+  position: relative;
+  padding-left: 30px;
+}
+.timeline ul::before {
+  content: '';
+  position: absolute;
+  left: 14px;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: #2196f3;
+}
+.timeline ul li {
+  position: relative;
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+.timeline ul li::before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: -6px;
+  width: 14px;
+  height: 14px;
+  background: #0d47a1;
+  border-radius: 50%;
+}
+
+/* === Footer === */
+footer {
+  background-color: #0d47a1;
+  color: white;
+  text-align: center;
+  padding: 30px 10px;
+  margin-top: 60px;
+  font-size: 15px;
+}
+
+/* === Responsive Fixes === */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .carousel-item img {
+    height: 250px;
+  }
+}
